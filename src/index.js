@@ -1,2 +1,2 @@
-import generateJoke from "generateJoke";
+import generateJoke from "./generate-joke";
 console.log(generateJoke());
