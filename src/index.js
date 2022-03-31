@@ -3,4 +3,6 @@ import "./styles/main.scss";
 import laughing from "./assets/laughing.svg";
 const laughImg = document.getElementById("laughImg");
 laughImg.src = laughing;
-console.log(generateJoke());
+const nextJokeBtn = document.getElementById("jokeBtn");
+nextJokeBtn.addEventListener("click", generateJoke);
+generateJoke();

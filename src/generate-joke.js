@@ -1,5 +1,13 @@
-const generateJoke = () => {
-  return "I don't like stairs, they always up to something.";
+import axios from "axios";
+const generateJoke = async () => {
+  const config = {
+    headers: {
+      Accept: "application/json",
+    },
+  };
+  const res = await axios.get("https://icanhazdadjoke.com", config);
+  const jokeEl = document.getElementById("joke");
+  jokeEl.innerHTML = res.data.joke;
 };
 
 export default generateJoke;
