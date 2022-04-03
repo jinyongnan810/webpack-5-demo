@@ -1,5 +1,5 @@
 import axios from "axios";
-const generateJoke = async () => {
+const generateJoke = async (): Promise<void> => {
   const config = {
     headers: {
       Accept: "application/json",
