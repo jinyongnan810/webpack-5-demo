@@ -5,7 +5,7 @@ const BundleAnalyzerPlugin =
 module.exports = {
   mode: "development",
   entry: {
-    bundle: path.resolve(__dirname, "src/index.ts"),
+    bundle: path.resolve(__dirname, "src/index.tsx"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -55,11 +55,12 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: "Webpack Demo",
-      filename: "index.html",
-      template: "src/template.html",
-    }),
+    // new HtmlWebpackPlugin({
+    //   title: "Webpack Demo",
+    //   filename: "index.html",
+    //   template: "src/template.html",
+    // }),
     new BundleAnalyzerPlugin(),
   ],
+  target: ["web", "es5"],
 };
